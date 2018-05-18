@@ -1,0 +1,123 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #FFE600;
+}
+.pikachu-wrapper{
+	width: 318px;
+	height: 180px;
+	position: relative;
+}
+.eye{
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border: 2px solid #000;
+	background: #2E2E2E;
+	position: absolute;
+	top: 0;
+}
+.eye::before{
+	content: '';
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	border: 2px solid #000;
+	background: #fff;
+	position: absolute;
+	top: -2px;
+	left: 4px;
+}
+.eye.left{
+	left: 45px;
+}
+.eye.right{
+	right: 45px;
+}
+
+.nose{
+	width: 0;
+	border-width: 10px 13px;
+	border-style: solid;
+	border-color: transparent;
+	border-top-color: #000;
+	border-radius: 10px;
+	position: absolute;
+	top: 24px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.face{
+	width: 66px;
+	height: 66px;
+	background: #f00;
+	border: 2px solid #000;
+	border-radius: 50%;
+	position: absolute;
+	top: 82px;
+}
+.face.left{
+	left: 0;
+}
+.face.right{
+	right: 0;
+}
+.upperLip{
+	width: 64px;
+	height: 22px;
+	border-bottom: 2px solid #000;
+	border-left: 2px solid #000;
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	background: #FFE600;
+	z-index: 1;
+}
+.upperLip.left{
+	transform: translateX(-100%) rotate(-20deg);
+	border-bottom-left-radius: 90px 30px;
+}
+.upperLip.right{
+	border-left: none;
+	transform: rotate(20deg);
+	border-bottom-right-radius: 90px 30px;
+	border-right: 2px solid #000;
+}
+.lowerLipWrapper{
+	width: 180px;
+	height: 130px;
+	overflow: hidden;
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.lowerLip{
+	width: 170px;
+	height: 1000px;
+	background: #9B000A;
+	border-radius: 100px/600px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	overflow: hidden;
+}
+.lowerLip::after{
+	content: '';
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: #FF485F;
+	position: absolute;
+	left: 50%;
+	bottom: -90px;
+	transform: translateX(-50%);
+}
